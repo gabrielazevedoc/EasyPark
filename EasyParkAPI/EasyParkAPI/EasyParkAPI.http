@@ -1,0 +1,6 @@
+@EasyParkAPI_HostAddress = http://localhost:5259
+
+GET {{EasyParkAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
