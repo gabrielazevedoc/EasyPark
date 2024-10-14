@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "EasyParkAPI.Controllers.UsuarioController",
+    "Method": "AdicionarUsuario",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioInputModel",
+        "Type": "EasyParkAPI.InputModel.UsuarioInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EasyParkAPI.Model.ResponseModel\u00601[[EasyParkAPI.Model.UsuarioModel, EasyParkAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
