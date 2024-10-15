@@ -6,15 +6,13 @@ namespace EasyParkAPI.Model
     public class UsuarioModel
     {
 
-        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Cpf { get; set; }
+        public string Email { get; set; }
         public string Senha { get; set; }
+        public ICollection<CarroModel> Carros { get; set; }
+        public ICollection<ReservaModel> Reservas { get; set; }
 
-        [JsonIgnore]
-        public List<CarroModel> Carros { get; set; }
 
-       
     }
 }

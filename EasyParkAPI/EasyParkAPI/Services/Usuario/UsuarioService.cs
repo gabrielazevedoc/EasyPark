@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EasyParkAPI.Services.Usuario
 {
-    public class UsuarioService : IUsuarioInterface
+    public class UsuarioService : IUsuarioService
     {
         private readonly ConnectionContext _context;
 
@@ -13,36 +13,25 @@ namespace EasyParkAPI.Services.Usuario
         {
             _context = context;
         }
-        public async Task<ResponseModel<List<UsuarioModel>>> AdicionarUsuario(UsuarioInputModel usuarioInputModel)
+
+        public async Task<UsuarioModel> CadastrarAsync(UsuarioModel usuario)
         {
-            ResponseModel<List<UsuarioModel>> resposta = new ResponseModel<List<UsuarioModel>>();
+            _context.Usuarios.Add(usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
+        }
 
-            try
-            {
-                var usuario = new UsuarioModel()
-                {
-                    Nome = usuarioInputModel.Nome,
-                    Cpf = usuarioInputModel.Cpf,
-                    Senha = usuarioInputModel.Senha,
-                };
+        public UsuarioModel Login(string email, string senha)
+        {
+            return _context.Usuarios
+           .FirstOrDefault(u => u.Email == email && u.Senha == senha);
+        }
 
-
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-
-                resposta.Dados = await _context.Usuarios.ToListAsync();
-                resposta.Mensagem = "Usuario cadastrado";
-
-                return resposta;
-
-            }
-            catch (Exception ex)
-            {
-
-                resposta.Mensagem = ex.Message;
-                resposta.Status = false;
-                return resposta;
-            }
+        public async Task<UsuarioModel> GetByIdAsync(int id)
+        {
+            return await _context.Usuarios
+                .Include(u => u.Carros)
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
     }
 }

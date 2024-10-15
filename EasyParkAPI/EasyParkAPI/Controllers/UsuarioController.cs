@@ -10,18 +10,34 @@ namespace EasyParkAPI.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        private readonly IUsuarioInterface _usuarioInterface;
+        private readonly IUsuarioService _usuarioService;
 
-        public UsuarioController(IUsuarioInterface usuarioInterface)
+        public UsuarioController(IUsuarioService usuarioService)
         {
-            _usuarioInterface = usuarioInterface;
+            _usuarioService = usuarioService;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<ResponseModel<UsuarioModel>>> AdicionarUsuario(UsuarioInputModel usuarioInputModel)
+        [HttpPost("cadastrar")]
+        public async Task<IActionResult> Cadastrar([FromBody] UsuarioModel usuario)
         {
-            var usuarios = await _usuarioInterface.AdicionarUsuario(usuarioInputModel);
-            return Ok(usuarios);
+            var result = await _usuarioService.CadastrarAsync(usuario);
+            return Ok(result);
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UsuarioModel usuario)
+        {
+            var user = _usuarioService.Login(usuario.Email, usuario.Senha);
+            if (user == null) return Unauthorized();
+            return Ok(user);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUsuario(int id)
+        {
+            var usuario = await _usuarioService.GetByIdAsync(id);
+            if (usuario == null) return NotFound();
+            return Ok(usuario);
         }
 
 

@@ -4,7 +4,8 @@ namespace EasyParkAPI.Model
 {
     public class VagaModel
     {
-        [Key]
-        public int IdVaga { get; set; }
+        public int Id { get; set; }
+        public bool Disponivel { get; set; }
+        public ICollection<ReservaModel> Reservas { get; set; }
     }
 }

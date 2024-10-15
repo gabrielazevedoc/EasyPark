@@ -1,5 +1,8 @@
 using EasyParkAPI.Infrastructure;
+using EasyParkAPI.Services.Carro;
+using EasyParkAPI.Services.Reserva;
 using EasyParkAPI.Services.Usuario;
+using EasyParkAPI.Services.Vaga;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +14,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ICarroService, CarroService>();
+builder.Services.AddScoped<IVagaService, VagaService>();
+builder.Services.AddScoped<IReservaService, ReservaService>();
 
 builder.Services.AddDbContext<ConnectionContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -26,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
