@@ -1,4 +1,5 @@
-﻿using EasyParkAPI.Model;
+﻿using EasyParkAPI.InputModel;
+using EasyParkAPI.Model;
 using EasyParkAPI.Services.Reserva;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,8 +18,16 @@ namespace EasyParkAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CriarReserva([FromBody] ReservaModel reserva)
+        public async Task<IActionResult> CriarReserva(ReservaInputModel reservaInputModel)
         {
+            var reserva = new ReservaModel
+            {
+                DataReserva = DateTime.Now,
+                UsuarioId = reservaInputModel.UsuarioId,
+                CarroId = reservaInputModel.CarroId,
+                VagaId = reservaInputModel.VagaId
+            };
+
             try
             {
                 var result = await _reservaService.CriarReservaAsync(reserva);

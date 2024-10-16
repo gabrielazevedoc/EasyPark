@@ -1,8 +1,88 @@
 [
   {
+    "ContainingType": "EasyParkAPI.Controllers.CarroController",
+    "Method": "AddCarro",
+    "RelativePath": "api/Carro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carroInputModel",
+        "Type": "EasyParkAPI.InputModel.CarroInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.CarroController",
+    "Method": "GetCarros",
+    "RelativePath": "api/Carro/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.ReservaController",
+    "Method": "CriarReserva",
+    "RelativePath": "api/Reserva",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservaInputModel",
+        "Type": "EasyParkAPI.InputModel.ReservaInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.ReservaController",
+    "Method": "GetReservas",
+    "RelativePath": "api/Reserva/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EasyParkAPI.Controllers.UsuarioController",
-    "Method": "AdicionarUsuario",
-    "RelativePath": "api/Usuario",
+    "Method": "GetUsuario",
+    "RelativePath": "api/Usuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.UsuarioController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Usuario/cadastrar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -13,16 +93,32 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "api/Usuario/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "EasyParkAPI.Model.ResponseModel\u00601[[EasyParkAPI.Model.UsuarioModel, EasyParkAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "usuarioInputModel",
+        "Type": "EasyParkAPI.InputModel.UsuarioInputModel",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EasyParkAPI.Controllers.VagaController",
+    "Method": "GetVagasDisponiveis",
+    "RelativePath": "api/Vaga",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

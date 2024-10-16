@@ -29,7 +29,7 @@ namespace EasyParkAPI.Services.Reserva
                 await _context.SaveChangesAsync();
                 return reserva;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

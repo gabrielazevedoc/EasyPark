@@ -1,4 +1,5 @@
-﻿using EasyParkAPI.Model;
+﻿using EasyParkAPI.InputModel;
+using EasyParkAPI.Model;
 using EasyParkAPI.Services.Carro;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,8 +18,16 @@ namespace EasyParkAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCarro([FromBody] CarroModel carro)
+        public async Task<IActionResult> AddCarro(CarroInputModel carroInputModel)
         {
+
+            var carro = new CarroModel
+            {
+                Placa = carroInputModel.Placa,
+                Modelo = carroInputModel.Modelo,
+                UsuarioId = carroInputModel.UsuarioId
+            };
+
             var result = await _carroService.AddCarroAsync(carro);
             return Ok(result);
         }

@@ -18,16 +18,23 @@ namespace EasyParkAPI.Controllers
         }
 
         [HttpPost("cadastrar")]
-        public async Task<IActionResult> Cadastrar([FromBody] UsuarioModel usuario)
+        public async Task<IActionResult> Cadastrar(UsuarioInputModel usuarioInputModel)
         {
+            var usuario = new UsuarioModel
+            {
+                Nome = usuarioInputModel.Nome,
+                Email = usuarioInputModel.Email,
+                Senha = usuarioInputModel.Senha
+            };
+
             var result = await _usuarioService.CadastrarAsync(usuario);
             return Ok(result);
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] UsuarioModel usuario)
+        public IActionResult Login(UsuarioInputModel usuarioInputModel)
         {
-            var user = _usuarioService.Login(usuario.Email, usuario.Senha);
+            var user = _usuarioService.Login(usuarioInputModel.Email, usuarioInputModel.Senha);
             if (user == null) return Unauthorized();
             return Ok(user);
         }
