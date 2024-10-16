@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32c93041c8fbb360123431bdad29e2e2ee471239")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1112fe21c32472198bbab5fb22fd71f2652a9fc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
