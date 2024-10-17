@@ -1,1 +1,28 @@
-<p>login-form works!</p>
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Digite o seu Email" />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <small *ngIf="loginForm.get('email')?.hasError('required')">O email é obrigatório.</small>
+        <small *ngIf="loginForm.get('email')?.hasError('email')">Formato de email inválido.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input id="password" type="password" formControlName="password" placeholder="Digite a sua senha" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small *ngIf="loginForm.get('password')?.hasError('required')">A senha é obrigatória.</small>
+        <small *ngIf="loginForm.get('password')?.hasError('minlength')">A senha deve ter no mínimo 6 caracteres.</small>
+      </div>
+    </div>
+
+    <div class="options">
+      <a href="#">Cadastrar usuário</a>
+      <a href="#">Esqueceu a sua senha?</a>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" class="btn-submit">Entrar</button>
+  </form>
+</div>
