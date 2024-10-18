@@ -1,11 +1,12 @@
 .login-container {
   width: 320px;
   margin: 100px auto;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 5px rgba(101, 101, 101, 0.336);
   text-align: center;
   font-family: Arial, sans-serif;
+  background-color: #fff;
 }
 
 .form-group {
@@ -32,9 +33,10 @@ input {
   }
 
 .options {
-  margin: 15px 0;
+  margin-bottom: 100px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 0.9em;
 }
 
