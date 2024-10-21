@@ -9,8 +9,9 @@ body {
     align-items: center;
   }
 
-  .logo{
+  #logo{
     width: 300px;
-    margin-bottom: 20px;
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+
   }
