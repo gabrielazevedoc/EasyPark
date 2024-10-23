@@ -1,5 +1,5 @@
 <div class="form-container">
-    <h2>Reserve a sua vaga</h2>
+    
     <form (ngSubmit)="onSubmit()">
       <label for="nome">Nome</label>
       <input type="text" id="nome" placeholder="Digite o seu nome" [(ngModel)]="nome" name="nome" required>
@@ -11,7 +11,7 @@
       <input type="text" id="modelo" placeholder="Digite o modelo do seu carro" [(ngModel)]="modelo" name="modelo" required>
   
       <label for="vaga">Número da Vaga</label>
-      <input type="number" id="vaga" [(ngModel)]="vaga" name="vaga" required>
+      <input type="number" placeholder="Selecione a vaga para reserva" id="vaga" [(ngModel)]="vaga" name="vaga" required>
   
       <button type="submit">Reservar vaga</button>
     </form>

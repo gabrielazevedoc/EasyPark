@@ -18,7 +18,9 @@ body {
   }
 
   h2{
+    font-family: Arial, sans-serif;
     color: #fff;
+    margin: 1px;
   }
 
   #logo{

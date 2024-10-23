@@ -1,23 +1,20 @@
 .form-container {
     background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(65, 64, 64, 0.2);
+    width: 400px;
     margin: 0 auto;
-  }
-  
-  .form-container h2 {
-    text-align: center;
   }
   
   .form-container label {
     display: block;
+    font-family: Arial, sans-serif;
     margin: 10px 0 5px;
   }
   
   .form-container input {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     margin-bottom: 15px;
     border-radius: 4px;
