@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\09617913496\\Source\\Repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {}
+    "C:\\Users\\09617913496\\source\\repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\09617913496\\Source\\Repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {
+    "C:\\Users\\09617913496\\source\\repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\09617913496\\Source\\Repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
+        "projectUniqueName": "C:\\Users\\09617913496\\source\\repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
         "projectName": "EasyParkAPI",
-        "projectPath": "C:\\Users\\09617913496\\Source\\Repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
+        "projectPath": "C:\\Users\\09617913496\\source\\repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
         "packagesPath": "C:\\Users\\09617913496\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\09617913496\\Source\\Repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\obj\\",
+        "outputPath": "C:\\Users\\09617913496\\source\\repos\\gabrielazevedoc\\EasyPark\\EasyParkAPI\\EasyParkAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\09617913496\\AppData\\Roaming\\NuGet\\NuGet.Config",
