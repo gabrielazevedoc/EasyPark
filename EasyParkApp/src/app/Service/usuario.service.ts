@@ -4,15 +4,16 @@ import { Observable } from 'rxjs';
 import { environment } from '../environments/environment.development';
 import { Usuario } from '../Models/Usuario';
 
-Injectable({
-  providedIn: 'root'
-})
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type' : 'application/json'
   })
 }
+
+@Injectable({
+  providedIn: 'root'
+})
 
 export class UsuarioService {
 

@@ -1,26 +1,61 @@
 <div class="form-container">
-    <form>
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Digite o seu nome" />
+  <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        id="nome"
+        formControlName="nome"
+        placeholder="Digite o seu nome"
+      />
+      <!-- Exibir erro apenas se o campo foi tocado -->
+      <div *ngIf="cadastroForm.get('nome')?.invalid && (cadastroForm.get('nome')?.touched || cadastroForm.get('nome')?.dirty)">
+        <small *ngIf="cadastroForm.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+        <small *ngIf="cadastroForm.get('nome')?.errors?.['minlength']">Nome precisa ter no mínimo 3 caracteres.</small>
       </div>
-  
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Digite o seu email" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        formControlName="email"
+        placeholder="Digite o seu email"
+      />
+      <div *ngIf="cadastroForm.get('email')?.invalid && (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)">
+        <small *ngIf="cadastroForm.get('email')?.errors?.['required']">Email é obrigatório.</small>
+        <small *ngIf="cadastroForm.get('email')?.errors?.['email']">Email inválido.</small>
       </div>
-  
-      <div class="form-group">
-        <label for="dataNascimento">Data de Nascimento</label>
-        <input type="date" id="dataNascimento" placeholder="Preencha com a sua data de nascimento" />
+    </div>
+
+    <div class="form-group">
+      <label for="dataNascimento">Data de Nascimento</label>
+      <input
+        type="date"
+        id="dataNascimento"
+        formControlName="dataNascimento"
+        placeholder="Preencha com a sua data de nascimento"
+      />
+      <div *ngIf="cadastroForm.get('dataNascimento')?.invalid && (cadastroForm.get('dataNascimento')?.touched || cadastroForm.get('dataNascimento')?.dirty)">
+        <small>Data de nascimento é obrigatória.</small>
       </div>
-  
-      <div class="form-group">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="Digite a sua senha para cadastrar" />
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        id="senha"
+        formControlName="senha"
+        placeholder="Digite a sua senha para cadastrar"
+      />
+      <div *ngIf="cadastroForm.get('senha')?.invalid && (cadastroForm.get('senha')?.touched || cadastroForm.get('senha')?.dirty)">
+        <small *ngIf="cadastroForm.get('senha')?.errors?.['required']">Senha é obrigatória.</small>
+        <small *ngIf="cadastroForm.get('senha')?.errors?.['minlength']">Senha precisa ter no mínimo 6 caracteres.</small>
       </div>
-  
-      <button type="submit" class="btn-cadastrar">Cadastrar</button>
-    </form>
-  </div>
-  
+    </div>
+
+    <button type="submit" class="btn-cadastrar" [disabled]="cadastroForm.invalid">Cadastrar</button>
+  </form>
+</div>
