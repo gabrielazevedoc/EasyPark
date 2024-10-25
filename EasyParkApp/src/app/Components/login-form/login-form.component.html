@@ -10,11 +10,11 @@
     </div>
 
     <div class="form-group">
-      <label for="password">Senha</label>
-      <input id="password" type="password" formControlName="password" placeholder="Digite a sua senha" />
-      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-        <small *ngIf="loginForm.get('password')?.hasError('required')">A senha é obrigatória.</small>
-        <small *ngIf="loginForm.get('password')?.hasError('minlength')">A senha deve ter no mínimo 6 caracteres.</small>
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" formControlName="senha" placeholder="Digite a sua senha" />
+      <div *ngIf="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched">
+        <small *ngIf="loginForm.get('senha')?.hasError('required')">A senha é obrigatória.</small>
+        <small *ngIf="loginForm.get('senha')?.hasError('minlength')">A senha deve ter no mínimo 6 caracteres.</small>
       </div>
     </div>
 
@@ -23,6 +23,6 @@
       <a href="#">Esqueceu a sua senha?</a>
     </div>
 
-    <button type="submit" [disabled]="loginForm.invalid" class="btn-submit">Entrar</button>
+    <button type="submit" [disabled]="loginForm.invalid" class="btn-submit" (ngSubmit)="onSubmit()">Entrar</button>
   </form>
 </div>

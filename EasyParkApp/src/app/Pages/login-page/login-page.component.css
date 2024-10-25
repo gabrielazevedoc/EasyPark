@@ -1,10 +1,9 @@
-body {
-    margin: 0;
-    padding: 0;
+.container {
     height: 100vh;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #000000, #2e2e2e); /* Gradiente para o fundo */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

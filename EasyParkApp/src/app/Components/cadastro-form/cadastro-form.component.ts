@@ -37,10 +37,10 @@ export class CadastroFormComponent {
       // Chamando o Sserviço para cadastrar o usuário
       this.usuarioService.cadastrar(usuario).subscribe({
         next: (response: Usuario) => {
-          console.log('Usuário cadastrado com sucesso', response);
+          alert("Usuario cadastrado com sucesso");
         },
         error: (error) => {
-          console.error('Erro ao cadastrar usuário', error);
+          alert("Erro no cadastramento do usuário")
         },
         complete: () => {
           console.log('Requisição completa');

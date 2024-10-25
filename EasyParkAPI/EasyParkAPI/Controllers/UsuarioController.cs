@@ -32,9 +32,15 @@ namespace EasyParkAPI.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login(UsuarioInputModel usuarioInputModel)
+        public IActionResult Login(LoginInputModel loginInputModel)
         {
-            var user = _usuarioService.Login(usuarioInputModel.Email, usuarioInputModel.Senha);
+            var usuario = new UsuarioModel
+            {
+                Email = loginInputModel.Email,
+                Senha = loginInputModel.Senha
+            };
+
+            var user = _usuarioService.Login(usuario.Email, usuario.Senha);
             if (user == null) return Unauthorized();
             return Ok(user);
         }
