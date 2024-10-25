@@ -1,12 +1,4 @@
-html{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .container {
-    margin: 0;
-    padding: 0;
     height: 100vh;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #000000, #2e2e2e); /* Gradiente para o fundo */
