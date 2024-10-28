@@ -24,26 +24,31 @@ export class LoginFormComponent {
 
     onSubmit() {
       if (this.loginForm.valid) {
-        
         const loginData = {
           email: this.loginForm.value.email,
           senha: this.loginForm.value.senha
         };
-       
-
-        console.log(loginData)
-
+    
         this.usuarioService.login(loginData).subscribe({
           next: (user) => {
             if (user) {
-              this.router.navigate(['/cadastro']);
-              console.log(user)
+              this.router.navigate(['/reserva']);
+              console.log(user);
+            } else {
+              // Exibir feedback visual para o usuário
+              alert('Erro no login: usuário não encontrado ou credenciais inválidas.');
             }
           },
           error: (err) => {
             console.error('Erro de login:', err);
+            // Exibir uma mensagem de erro visual para o usuário
+            alert('Erro ao conectar com o servidor. Tente novamente mais tarde.');
           }
         });
+      } else {
+        console.warn('Formulário inválido');
+        // Opcional: fornecer feedback visual para o usuário sobre formulário inválido
+        alert('Por favor, preencha todos os campos corretamente.');
       }
-}
+    }
 }

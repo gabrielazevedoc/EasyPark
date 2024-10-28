@@ -30,16 +30,13 @@ export class UsuarioService {
   }
 
   login(credentials: { email: string; senha: string }): Observable<Usuario | null> {
-    return this.http.post<{ token: string; user: Usuario }>(`${this.apiUrl}/login`, credentials).pipe(
-      tap((response) => {
-        localStorage.setItem(this.tokenKey, response.token);
-      }),
-      map((response => response.user), // retorna apenas o objeto usuário
+    return this.http.post<Usuario>(`${this.apiUrl}/login`, credentials).pipe(
+      map((response) => response), // retorna diretamente o objeto `user`
       catchError((error) => {
         console.error('Login falhou:', error);
         return of(null); // retorna `null` em caso de erro
       })
-    ));
+    );
   }
 
   getUserInfo(id : number): Observable<Usuario | null> {
