@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9498283bd56f482314f9d0ca7ecb82520bf386b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc827a9bcf203354793d19fc11d0d48d5b081bd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyParkAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

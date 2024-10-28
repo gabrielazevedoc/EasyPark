@@ -4,7 +4,7 @@ import { CadastroPageComponent } from './Pages/cadastro-page/cadastro-page.compo
 import { ReservaPageComponent } from './Pages/reserva-page/reserva-page.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/cadastro', pathMatch: 'full' }, 
+    { path: '', redirectTo: '/login', pathMatch: 'full' }, 
     { path: 'login', component: LoginPageComponent }, 
     { path: 'cadastro', component: CadastroPageComponent }, 
     { path: 'reserva', component: ReservaPageComponent }
