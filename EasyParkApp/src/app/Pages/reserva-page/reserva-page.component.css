@@ -1,15 +1,28 @@
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: linear-gradient(to bottom, #000000, #2e2e2e);
-}
-
 .container{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #000000, #2e2e2e);
+  height: 100vh;
+}
+
+.usuario-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.usuario-info h1{
+  color: #FFF;
+  margin-bottom: 50px;
+}
+
+.reserva-container{
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
 }
 
 .reserva-form{

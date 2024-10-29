@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+// src/app/services/usuario.service.ts
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { environment } from '../environments/environment.development';
@@ -6,24 +8,24 @@ import { Usuario } from '../Models/Usuario';
 import { tap, catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
-
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type' : 'application/json'
+    'Content-Type': 'application/json'
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class UsuarioService {
 
   private apiUrl = `${environment.ApiUrl}/Usuario`;
-  private tokenKey = 'auth_token';
 
-
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: object // Injeta a plataforma atual
+  ) {}
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.apiUrl}/cadastrar`, usuario, httpOptions);
@@ -31,37 +33,40 @@ export class UsuarioService {
 
   login(credentials: { email: string; senha: string }): Observable<Usuario | null> {
     return this.http.post<Usuario>(`${this.apiUrl}/login`, credentials).pipe(
-      map((response) => response), // retorna diretamente o objeto `user`
+      tap((response) => {
+        if (isPlatformBrowser(this.platformId) && response && response.id) {
+          // Apenas armazena o ID do usuário no navegador
+          localStorage.setItem('loggedInUserId', response.id.toString());
+        }
+      }),
       catchError((error) => {
         console.error('Login falhou:', error);
-        return of(null); // retorna `null` em caso de erro
+        return of(null);
       })
     );
   }
 
-  getUserInfo(id : number): Observable<Usuario | null> {
-    const token = localStorage.getItem(this.tokenKey);
-    if (token) {
-      return this.http.get<Usuario>(`${this.apiUrl}/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      }).pipe(
-        catchError(() => of(null)) // Retorna `null` se a requisição falhar
-      );
-    }
-    return of(null);
+  getUserInfo(id: number): Observable<Usuario | null> {
+    return this.http.get<Usuario>(`${this.apiUrl}/${id}`).pipe(
+      catchError((error) => {
+        console.error('Falha ao obter informações do usuário:', error);
+        return of(null);
+      })
+    );
   }
 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem(this.tokenKey);
+  getLoggedInUserId(): number | null {
+    if (isPlatformBrowser(this.platformId)) {
+      const id = localStorage.getItem('loggedInUserId');
+      return id ? parseInt(id, 10) : null;
+    }
+    return null; // Retorna `null` se não estiver no navegador
   }
 
   logout(): void {
-    localStorage.removeItem(this.tokenKey);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem('loggedInUserId');
+    }
     this.router.navigate(['/login']);
   }
-
-  getUsuarioById(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.apiUrl}/${id}`);
-  }
-
 }

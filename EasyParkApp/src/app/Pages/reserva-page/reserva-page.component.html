@@ -1,6 +1,15 @@
-<body>
+
     
-    <div class="container">
+<div class="container">
+
+    <div class="usuario-info" *ngIf="usuario">
+        <h1>Bem-vindo, {{ usuario.nome }}!</h1>
+    </div>
+    <div *ngIf="!usuario">
+        <p>Carregando informações do usuário...</p>
+    </div>
+
+    <div class="reserva-container">
         <div class="reserva-form">
             <h2>Reserve a sua vaga</h2>
             <app-reserva-form></app-reserva-form>
@@ -8,4 +17,5 @@
         
         <app-vagas-grid></app-vagas-grid>
     </div>
-</body>
+</div>
+
