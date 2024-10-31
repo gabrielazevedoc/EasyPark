@@ -8,6 +8,18 @@
     align-items: center;
   }
 
+  mat-icon{
+      height: 50px;
+      width: 50px;
+      font-size: 50px;
+      color: #FFF;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+    
+  }
+
   .cadastro-form-container{
     display: flex;
     flex-direction: column;

@@ -4,11 +4,12 @@ import { VagasGridComponent } from '../../Components/vagas-grid/vagas-grid.compo
 import { Usuario } from '../../Models/Usuario';
 import { UsuarioService } from '../../Service/usuario.service';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-reserva-page',
   standalone: true,
-  imports: [ReservaFormComponent, VagasGridComponent, CommonModule],
+  imports: [ReservaFormComponent, VagasGridComponent, CommonModule, MatIconModule],
   templateUrl: './reserva-page.component.html',
   styleUrl: './reserva-page.component.css'
 })
@@ -24,6 +25,10 @@ export class ReservaPageComponent implements OnInit {
         this.usuario = user;
       });
     }
+  }
+
+  logout() : void{
+    this.usuarioService.logout();
   }
 
 }
