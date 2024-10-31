@@ -1,22 +1,17 @@
-.vagas-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 50px);
-    gap: 10px;
-    margin: 20px auto;
-    max-width: 320px;
-  }
+.parking-slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  border-radius: 10px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
   
-  .vagas-grid button {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border: 1px solid #333;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .vagas-grid button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
-  }
-  
+}
+
+button.reserved {
+  background-color: red;
+  color: white;
+}

@@ -6,24 +6,39 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-reserva-form',
   standalone: true,
   templateUrl: './reserva-form.component.html',
-  styleUrls: ['./reserva-form.component.css'],
+  styleUrls: ['./reserva-form.component.css'], 
   imports: [FormsModule]
 })
 export class ReservaFormComponent {
-  nome: string = '';
-  placa: string = '';
-  modelo: string = '';
-  vaga: number | null = null;
+  form = {
+    nome: '',
+    placa: '',
+    modelo: '',
+    numeroVaga: ''
+  };
 
-  constructor(private vagasService: VagasService) {}
+  constructor(private vagasService: VagasService) {
+    this.vagasService.getSelectedSlot().subscribe(slotNumber => {
+      if (slotNumber !== null) {
+        this.form.numeroVaga = slotNumber.toString();
+      }
+    });
+  }
 
-  onSubmit() {
-    if (this.vaga !== null) {
-      this.vagasService.reservarVaga(this.vaga, {
-        nome: this.nome,
-        placa: this.placa,
-        modelo: this.modelo
-      });
+  reservarVaga() {
+    const slotNumber = parseInt(this.form.numeroVaga, 10);
+    if (slotNumber && this.form.nome && this.form.placa && this.form.modelo) {
+      this.vagasService.reserveSlot(slotNumber);
+      this.limparFormulario();
     }
+  }
+
+  limparFormulario() {
+    this.form = {
+      nome: '',
+      placa: '',
+      modelo: '',
+      numeroVaga: ''
+    };
   }
 }

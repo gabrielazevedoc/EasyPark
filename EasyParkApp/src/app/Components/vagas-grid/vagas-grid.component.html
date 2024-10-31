@@ -1,6 +1,12 @@
-<div class="vagas-grid">
-    <button *ngFor="let vaga of vagas" [disabled]="vaga.reservada" (click)="selecionarVaga(vaga)">
-      {{ vaga.numero }}
-    </button>
-  </div>
+<div class="parking-slots">
+  <button
+    *ngFor="let slot of slots"
+    [ngClass]="{ 'reserved': slot.reserved }"
+    (click)="selecionarVaga(slot)"
+    [disabled]="slot.reserved"
+  >
+    {{ slot.number }}
+  </button>
+</div>
+
   

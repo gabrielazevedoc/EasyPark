@@ -1,33 +1,41 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-interface Reserva {
-  nome: string;
-  placa: string;
-  modelo: string;
+export interface Slot {
+  number: number;
+  reserved: boolean;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class VagasService {
-  private vagas = new BehaviorSubject(
-    Array.from({ length: 36 }, (_, i) => ({ numero: i + 1, reservada: false }))
-  );
-  vagas$ = this.vagas.asObservable();
+  private slots: Slot[] = Array.from({ length: 36 }, (_, i) => ({
+    number: i + 1,
+    reserved: false
+  }));
 
-  reservarVaga(vaga: number, reserva: Reserva) {
-    const vagasAtualizadas = this.vagas.value.map(v => 
-      v.numero === vaga ? { ...v, reservada: true, reserva } : v
-    );
-    this.vagas.next(vagasAtualizadas);
+  private selectedSlot = new BehaviorSubject<number | null>(null);
+  private slotsSubject = new BehaviorSubject<Slot[]>(this.slots);
+
+  getSlots(): Observable<Slot[]> {
+    return this.slotsSubject.asObservable();
   }
 
-  selecionarVaga(vaga: number) {
-    console.log(`Vaga selecionada: ${vaga}`);
+  getSelectedSlot(): Observable<number | null> {
+    return this.selectedSlot.asObservable();
   }
 
-  getVagas() {
-    return this.vagas$;
+  selectSlot(slotNumber: number): void {
+    this.selectedSlot.next(slotNumber);
+  }
+
+  reserveSlot(slotNumber: number): void {
+    const slot = this.slots.find(s => s.number === slotNumber);
+    if (slot) {
+      slot.reserved = true;
+      this.slotsSubject.next(this.slots);  // Atualiza a lista de vagas
+      this.selectedSlot.next(null);  // Limpa a vaga selecionada
+    }
   }
 }

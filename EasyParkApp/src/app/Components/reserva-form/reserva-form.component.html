@@ -1,17 +1,17 @@
 <div class="form-container">
     
-    <form (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="reservarVaga()">
       <label for="nome">Nome</label>
-      <input type="text" id="nome" placeholder="Digite o seu nome" [(ngModel)]="nome" name="nome" required>
+      <input type="text" id="nome" placeholder="Digite o seu nome" [(ngModel)]="form.nome" name="nome" required>
   
       <label for="placa">Placa</label>
-      <input type="text" id="placa" placeholder="Digite a placa do carro" [(ngModel)]="placa" name="placa" required>
+      <input type="text" id="placa" placeholder="Digite a placa do carro" [(ngModel)]="form.placa" name="placa" required>
   
       <label for="modelo">Modelo</label>
-      <input type="text" id="modelo" placeholder="Digite o modelo do seu carro" [(ngModel)]="modelo" name="modelo" required>
+      <input type="text" id="modelo" placeholder="Digite o modelo do seu carro" [(ngModel)]="form.modelo" name="modelo" required>
   
       <label for="vaga">Número da Vaga</label>
-      <input type="number" placeholder="Selecione a vaga para reserva" id="vaga" [(ngModel)]="vaga" name="vaga" required>
+      <input type="number" placeholder="Selecione a vaga para reserva" id="vaga" [(ngModel)]="form.numeroVaga" name="vaga" required>
   
       <button type="submit">Reservar vaga</button>
     </form>

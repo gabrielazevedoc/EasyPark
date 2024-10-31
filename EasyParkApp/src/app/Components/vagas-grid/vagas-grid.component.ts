@@ -1,28 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { VagasService } from '../../Service/vagas.service';
-import { NgFor } from '@angular/common';
+import { Slot } from '../../Service/vagas.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-vagas-grid',
   standalone: true,
   templateUrl: './vagas-grid.component.html',
   styleUrls: ['./vagas-grid.component.css'],
-  imports: [NgFor]
+  imports: [CommonModule]
 })
 export class VagasGridComponent implements OnInit {
-  vagas = Array.from({ length: 36 }, (_, i) => ({ numero: i + 1, reservada: false }));
+  slots: Slot[] = [];
 
   constructor(private vagasService: VagasService) {}
 
-  ngOnInit() {
-    this.vagasService.getVagas().subscribe(vagasAtualizadas => {
-      this.vagas = vagasAtualizadas;
+  ngOnInit(): void {
+    this.vagasService.getSlots().subscribe(slots => {
+      this.slots = slots;
     });
   }
 
-  selecionarVaga(vaga: any) {
-    if (!vaga.reservada) {
-      this.vagasService.selecionarVaga(vaga.numero);
+  selecionarVaga(slot: Slot) {
+    if (!slot.reserved) {
+      this.vagasService.selectSlot(slot.number);
     }
   }
 }
