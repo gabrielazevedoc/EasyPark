@@ -45,6 +45,8 @@ export class CadastroFormComponent {
         complete: () => {
           console.log('Requisição completa');
         }})
+
+        this.cadastroForm.reset();
       
     }
   }
