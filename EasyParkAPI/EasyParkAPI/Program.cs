@@ -12,9 +12,7 @@ builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddDbContext<ConnectionContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                          ?? "Server=" + Environment.GetEnvironmentVariable("DB_SERVER_NAME") 
-                          + ";Database=EasyParkDB;trusted_connection=true;TrustServerCertificate=True;";
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseSqlServer(connectionString);
 });
 
