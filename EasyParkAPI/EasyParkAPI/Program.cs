@@ -8,6 +8,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddEnvironmentVariables();
+
+builder.Services.AddDbContext<ConnectionContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                          ?? "Server=" + Environment.GetEnvironmentVariable("DB_SERVER_NAME") 
+                          + ";Database=EasyParkDB;trusted_connection=true;TrustServerCertificate=True;";
+    options.UseSqlServer(connectionString);
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -34,10 +44,13 @@ builder.Services.AddScoped<ICarroService, CarroService>();
 builder.Services.AddScoped<IVagaService, VagaService>();
 builder.Services.AddScoped<IReservaService, ReservaService>();
 
-builder.Services.AddDbContext<ConnectionContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ConnectionContext>();
+    dbContext.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
