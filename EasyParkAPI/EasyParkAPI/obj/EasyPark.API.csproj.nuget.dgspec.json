@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {}
+    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyPark.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {
+    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyPark.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
-        "projectName": "EasyParkAPI",
-        "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
+        "projectUniqueName": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyPark.API.csproj",
+        "projectName": "EasyPark.API",
+        "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyPark.API.csproj",
         "packagesPath": "C:\\Users\\09617913496\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {}
+    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj": {
+    "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
-        "projectName": "EasyParkAPI",
-        "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\EasyParkAPI.csproj",
+        "projectUniqueName": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj",
+        "projectName": "EasyPark.Core",
+        "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj",
         "packagesPath": "C:\\Users\\09617913496\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\obj\\",
+        "outputPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\09617913496\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,23 +46,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -77,9 +63,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
