@@ -1,4 +1,4 @@
-﻿using EasyParkAPI.Services.Vaga;
+﻿using EasyPark.Application.Services.Vaga;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,6 +1,7 @@
-﻿using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
-using EasyParkAPI.Services.Usuario;
+﻿
+using EasyPark.Application.DTO;
+using EasyPark.Application.Services.Usuario;
+using EasyPark.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 
@@ -34,7 +35,7 @@ namespace EasyParkAPI.Controllers
         [HttpPost("login")]
         public IActionResult Login(LoginInputModel loginInputModel)
         {
-            var usuario = new UsuarioModel
+            UsuarioModel usuario = new UsuarioModel
             {
                 Email = loginInputModel.Email,
                 Senha = loginInputModel.Senha

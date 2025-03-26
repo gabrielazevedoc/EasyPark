@@ -1,10 +1,10 @@
-﻿using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
-using EasyParkAPI.Services.Carro;
+﻿using EasyPark.Application.DTO;
+using EasyPark.Core.Entities;
+using EasyPark.Application.Services.Carro;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EasyParkAPI.Controllers
+namespace EasyPark.Application.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -25,7 +25,6 @@ namespace EasyParkAPI.Controllers
             {
                 Placa = carroInputModel.Placa,
                 Modelo = carroInputModel.Modelo,
-                UsuarioId = carroInputModel.UsuarioId
             };
 
             var result = await _carroService.AddCarroAsync(carro);

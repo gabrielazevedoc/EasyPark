@@ -59,6 +59,23 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -1231,7 +1248,7 @@
       "System.IO.Pipelines/6.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
@@ -1582,6 +1599,47 @@
             "rid": "win"
           }
         }
+      },
+      "EasyPark.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EasyPark.Core": "1.0.0",
+          "EasyPark.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EasyPark.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyPark.Application.dll": {}
+        }
+      },
+      "EasyPark.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/EasyPark.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyPark.Core.dll": {}
+        }
+      },
+      "EasyPark.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EasyPark.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/EasyPark.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasyPark.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1644,6 +1702,25 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -4446,10 +4523,28 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EasyPark.Application/1.0.0": {
+      "type": "project",
+      "path": "../EasyPark.Application/EasyPark.Application.csproj",
+      "msbuildProject": "../EasyPark.Application/EasyPark.Application.csproj"
+    },
+    "EasyPark.Core/1.0.0": {
+      "type": "project",
+      "path": "../EasyPark.Core/EasyPark.Core.csproj",
+      "msbuildProject": "../EasyPark.Core/EasyPark.Core.csproj"
+    },
+    "EasyPark.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EasyPark.Infrastructure/EasyPark.Infrastructure.csproj",
+      "msbuildProject": "../EasyPark.Infrastructure/EasyPark.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EasyPark.Application >= 1.0.0",
+      "EasyPark.Core >= 1.0.0",
+      "EasyPark.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
@@ -4457,7 +4552,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\09617913496\\.nuget\\packages\\": {}
+    "C:\\Users\\09617913496\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4468,6 +4564,9 @@
       "packagesPath": "C:\\Users\\09617913496\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyParkAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\09617913496\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -4483,7 +4582,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Application\\EasyPark.Application.csproj": {
+              "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Application\\EasyPark.Application.csproj"
+            },
+            "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj": {
+              "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj"
+            },
+            "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Infrastructure\\EasyPark.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Infrastructure\\EasyPark.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

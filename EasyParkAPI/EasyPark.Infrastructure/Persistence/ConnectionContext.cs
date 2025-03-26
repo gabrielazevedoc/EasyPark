@@ -1,7 +1,7 @@
 ﻿using EasyPark.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace EasyParkAPI.Infrastructure
+namespace EasyPark.Infrastructure.Persistence
 {
     public class ConnectionContext : DbContext
     {
@@ -21,9 +21,8 @@ namespace EasyParkAPI.Infrastructure
             base.OnModelCreating(modelBuilder);
             // Definindo relacionamentos
             modelBuilder.Entity<UsuarioModel>()
-                .HasMany(u => u.Carros)
-                .WithOne(c => c.Usuario)
-                .HasForeignKey(c => c.UsuarioId);
+                .HasMany(u => u.Carros);
+               
 
             modelBuilder.Entity<UsuarioModel>()
                 .HasMany(u => u.Reservas)

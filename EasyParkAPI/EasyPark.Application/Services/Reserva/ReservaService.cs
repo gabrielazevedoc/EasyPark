@@ -1,9 +1,8 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 
-namespace EasyParkAPI.Services.Reserva
+namespace EasyPark.Application.Services.Reserva
 {
     public class ReservaService : IReservaService
     {

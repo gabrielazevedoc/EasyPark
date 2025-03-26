@@ -1,8 +1,9 @@
 using System.Text.Json.Serialization;
-using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Services.Carro;
-using EasyParkAPI.Services.Reserva;
-using EasyParkAPI.Services.Usuario;
+using EasyPark.Application.Services.Carro;
+using EasyPark.Application.Services.Reserva;
+using EasyPark.Application.Services.Usuario;
+using EasyPark.Application.Services.Vaga;
+using EasyPark.Infrastructure.Persistence;
 using EasyParkAPI.Services.Vaga;
 using Microsoft.EntityFrameworkCore;
 

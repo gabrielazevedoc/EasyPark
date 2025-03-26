@@ -1,6 +1,6 @@
-﻿using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
-using EasyParkAPI.Services.Reserva;
+﻿using EasyPark.Application.DTO;
+using EasyPark.Application.Services.Reserva;
+using EasyPark.Core.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

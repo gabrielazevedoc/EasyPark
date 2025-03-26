@@ -1,7 +1,6 @@
-﻿using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
 
-namespace EasyParkAPI.Services.Usuario
+namespace EasyPark.Application.Services.Usuario
 {
     public interface IUsuarioService
     {

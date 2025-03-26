@@ -1,6 +1,6 @@
-﻿using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
 
-namespace EasyParkAPI.Services.Reserva
+namespace EasyPark.Application.Services.Reserva
 {
     public interface IReservaService
     {

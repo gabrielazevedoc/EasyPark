@@ -1,7 +1,7 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Model;
+﻿using EasyPark.Application.Services.Vaga;
+using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace EasyParkAPI.Services.Vaga
 {

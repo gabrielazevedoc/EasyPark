@@ -13,5 +13,6 @@ namespace EasyPark.Core.Entities
         public string Cor { get; set; }
         [NotMapped]
         public IFormFile? Foto { get; set; }
+        public int UsuarioId { get; set; }
     }
 }

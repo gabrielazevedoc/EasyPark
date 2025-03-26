@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "E8+mPD0kU9ChgBtY5dSTURW2ozPR7kr1MLYjDQrvGoo=",
-  "Source": "EasyParkAPI",
-  "BasePath": "_content/EasyParkAPI",
+  "Hash": "Hw6U3DG5wj4p5TXDpkVZddNuDDRTJFmhmUFftGEg3Ow=",
+  "Source": "EasyPark.API",
+  "BasePath": "_content/EasyPark.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

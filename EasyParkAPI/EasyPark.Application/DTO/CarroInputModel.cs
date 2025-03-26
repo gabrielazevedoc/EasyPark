@@ -1,10 +1,9 @@
-﻿namespace EasyParkAPI.InputModel
-{
-    public class CarroInputModel
-    {
+﻿namespace EasyPark.Application.DTO;
 
-        public string Placa { get; set; }
-        public string Modelo { get; set; }
-        public int UsuarioId { get; set; }
-    }
+public class CarroInputModel
+{
+
+    public string Placa { get; set; }
+    public string Modelo { get; set; }
+    public int UsuarioId { get; set; }
 }

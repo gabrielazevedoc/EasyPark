@@ -1,9 +1,9 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
+﻿
+using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace EasyParkAPI.Services.Usuario
+namespace EasyPark.Application.Services.Usuario
 {
     public class UsuarioService : IUsuarioService
     {
