@@ -1,0 +1,5 @@
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Application\obj\Debug\net8.0\EasyPark.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Application\obj\Debug\net8.0\EasyPark.Application.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Application\obj\Debug\net8.0\EasyPark.Application.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Application\obj\Debug\net8.0\EasyPark.Application.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Application\obj\Debug\net8.0\EasyPark.Application.sourcelink.json

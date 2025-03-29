@@ -1,0 +1,13 @@
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\bin\Debug\net8.0\EasyPark.Core.deps.json
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\bin\Debug\net8.0\EasyPark.Core.dll
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\bin\Debug\net8.0\EasyPark.Core.pdb
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.sourcelink.json
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.dll
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\refint\EasyPark.Core.dll
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\EasyPark.Core.pdb
+C:\Users\gabri\OneDrive\Documentos\EasyPark\EasyPark\EasyParkAPI\EasyPark.Core\obj\Debug\net8.0\ref\EasyPark.Core.dll
