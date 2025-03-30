@@ -8,11 +8,19 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EasyPark.Core\EasyPark.Core.csproj" />
-    <ProjectReference Include="..\EasyParkAPI\EasyPark.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.3" />
   </ItemGroup>
 
 </Project>

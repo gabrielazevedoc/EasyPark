@@ -1,16 +1,16 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 
-namespace EasyParkAPI.Services.Carro
+
+namespace EasyPark.Application.Services.Carro
 {
     public class CarroService : ICarroService
     {
 
-        private readonly ConnectionContext _context;
+        private readonly EasyParkContext _context;
 
-        public CarroService(ConnectionContext context)
+        public CarroService(EasyParkContext context)
         {
             _context = context;
         }

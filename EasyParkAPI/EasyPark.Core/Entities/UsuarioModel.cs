@@ -12,6 +12,8 @@ namespace EasyPark.Core.Entities
         public List<CarroModel> Carros { get; set; }
         public List<ReservaModel> Reservas { get; set; }
 
+        public UsuarioModel() { }
+
         public UsuarioModel(string nome, string email, string senha)
         {
             Nome = nome;

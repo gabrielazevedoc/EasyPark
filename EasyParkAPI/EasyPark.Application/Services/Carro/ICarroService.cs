@@ -1,7 +1,6 @@
-﻿using EasyParkAPI.InputModel;
-using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
 
-namespace EasyParkAPI.Services.Carro
+namespace EasyPark.Application.Services.Carro
 {
     public interface ICarroService
     {

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "m22txICZOyQ=",
+  "dgSpecHash": "h9y6fFl65oE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\09617913496\\Documents\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Documentos\\EasyPark\\EasyPark\\EasyParkAPI\\EasyPark.Core\\EasyPark.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\09617913496\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
-    "C:\\Users\\09617913496\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\09617913496\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }

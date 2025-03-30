@@ -1,6 +1,6 @@
-﻿using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
 
-namespace EasyParkAPI.Services.Vaga
+namespace EasyPark.Application.Services.Vaga
 {
     public interface IVagaService
     {

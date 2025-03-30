@@ -1,15 +1,15 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Model;
+﻿using EasyPark.Application.Services.Vaga;
+using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace EasyParkAPI.Services.Vaga
 {
     public class VagaService : IVagaService
     {
-        private readonly ConnectionContext _context;
+        private readonly EasyParkContext _context;
 
-        public VagaService(ConnectionContext context)
+        public VagaService(EasyParkContext context)
         {
             _context = context;
         }

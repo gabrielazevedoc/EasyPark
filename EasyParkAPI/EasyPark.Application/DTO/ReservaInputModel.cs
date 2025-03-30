@@ -1,4 +1,4 @@
-﻿namespace EasyParkAPI.InputModel
+﻿namespace EasyPark.Application.DTO
 {
     public class ReservaInputModel
     {

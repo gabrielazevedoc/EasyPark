@@ -1,16 +1,15 @@
-﻿using EasyParkAPI.Infrastructure;
-using EasyParkAPI.Model;
+﻿using EasyPark.Core.Entities;
+using EasyPark.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 
-namespace EasyParkAPI.Services.Reserva
+namespace EasyPark.Application.Services.Reserva
 {
     public class ReservaService : IReservaService
     {
 
-        private readonly ConnectionContext _context;
+        private readonly EasyParkContext _context;
 
-        public ReservaService(ConnectionContext context)
+        public ReservaService(EasyParkContext context)
         {
             _context = context;
         }
