@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyPark.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0237896c79c94ee8d22dd555b01cc0f866980bee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc96db7f5cff83b32a31e14ed0e1678f0c557a9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyPark.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyPark.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
