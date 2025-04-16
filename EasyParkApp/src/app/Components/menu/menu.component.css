@@ -1,0 +1,44 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: black;
+    max-width: 350px;
+    width: 100%;
+}
+
+.menu-container .logo{
+    width: 250px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    list-style: none;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 5px;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.logout{
+    width: 10%;
+    margin: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
