@@ -1,0 +1,47 @@
+.dashboard-container {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  .dashboard-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .reservas-list {
+    display: flex;
+    width: 80%;;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os cards */
+  }
+  
+  .reserva-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cards */
+  }
+  
+  .reserva-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Ícone circular */
+    margin-right: 15px; /* Espaçamento entre o ícone e o texto */
+  }
+  
+  .reserva-info p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .reserva-info p:first-child {
+    font-weight: bold; /* Nome do estacionamento em negrito */
+    margin-bottom: 5px;
+  }
